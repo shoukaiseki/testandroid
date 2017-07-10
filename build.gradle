@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+  buildscript {
+
+  repositories {
+  maven { url 'https://dl.google.com/dl/android/maven2/' }
+  jcenter()
+  }
+  dependencies {
+  classpath 'com.android.tools.build:gradle:3.0.0-alpha4'
+
+// NOTE: Do not place your application dependencies here; they belong
+// in the individual module build.gradle files
+}
+}
+
+allprojects {
+repositories {
+jcenter()
+maven { url 'https://dl.google.com/dl/android/maven2/' }
+}
+}
+
+task clean(type: Delete) {
+delete rootProject.buildDir
+}
+
+/**
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+		classpath 'com.android.tools.build:gradle:2.3.0'
+    }
+}
+
+apply plugin: 'android'
+
+dependencies {
+}
+
+android {
+
+    compileSdkVersion 19
+    buildToolsVersion "25"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'app/src/main/AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        instrumentTest.setRoot('tests')
+    }
+}
+ **/

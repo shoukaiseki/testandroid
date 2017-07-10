@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <data>
+        <!--变量-->
+        <variable  name="user"
+            type="com.example.shoukaiseki.ttttt.model.User"/>
+        <variable  name="person"
+            type="com.example.shoukaiseki.ttttt.model.Person"/>
+    </data>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shoukaiseki.ttttt.MainActivity">
+        <!--
+     <android.support.design.widget.CoordinatorLayout
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+         android:layout_height="match_parent" tools:context="com.example.shoukaiseki.ttttt.MainActivity">
+        -->
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+            <include
+                android:id="@+id/content_main1"
+                layout="@layout/content_main"
+                android:layout_width="match_parent"
+                android:layout_height="82dp" />
+
+            <!--
+            app:子布局variable.name = 本布局的变量名
+            -->
+            <include
+                layout="@layout/databinding_main"
+                android:layout_width="match_parent"
+                app:user="@{user}"
+                app:person="@{person}"
+                android:layout_height="match_parent" />
+            <!--
+            -->
+
+            <TextView
+                android:layout_width="500px"
+                android:layout_height="50px"
+                android:background="#FF0000"
+                android:text="@{user.name}"/>
+            <TextView
+                android:layout_width="500px"
+                android:layout_height="50px"
+                android:background="#FF0000"
+                android:text="@{user.nickName}"/>
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="500px"
+                android:layout_height="50px"
+                android:background="#FF0000"
+                android:text="@{user.email}" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+</android.support.design.widget.CoordinatorLayout>
+
+</layout>
