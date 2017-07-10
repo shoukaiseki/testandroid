@@ -1,6 +1,6 @@
-package com.example.shoukaiseki.ttttt.model;
+package com.example.shoukaiseki.databuilding.model;
 
-public class User {
+public class Person {
     private String name;
     private String nickName;
     private String email;

@@ -3,22 +3,22 @@
     <data>
         <!--变量-->
         <variable  name="user"
-            type="com.example.shoukaiseki.ttttt.model.User"/>
+            type="com.example.shoukaiseki.databuilding.model.User"/>
         <variable  name="person"
-            type="com.example.shoukaiseki.ttttt.model.Person"/>
+            type="com.example.shoukaiseki.databuilding.model.Person"/>
     </data>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shoukaiseki.ttttt.MainActivity">
+    tools:context="com.example.shoukaiseki.databuilding.MainActivity">
         <!--
      <android.support.design.widget.CoordinatorLayout
          xmlns:android="http://schemas.android.com/apk/res/android"
          xmlns:app="http://schemas.android.com/apk/res-auto"
          xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-         android:layout_height="match_parent" tools:context="com.example.shoukaiseki.ttttt.MainActivity">
+         android:layout_height="match_parent" tools:context="com.example.shoukaiseki.databuilding.MainActivity">
         -->
 
 

@@ -1,4 +1,4 @@
-package com.example.shoukaiseki.ttttt;
+package com.example.shoukaiseki.databuilding;
 
 import org.junit.Test;
 

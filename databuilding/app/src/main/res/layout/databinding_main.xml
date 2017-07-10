@@ -3,9 +3,9 @@
     <data>
         <!--变量-->
         <variable  name="user"
-            type="com.example.shoukaiseki.ttttt.model.User"/>
+            type="com.example.shoukaiseki.databuilding.model.User"/>
         <variable  name="person"
-            type="com.example.shoukaiseki.ttttt.model.Person"/>
+            type="com.example.shoukaiseki.databuilding.model.Person"/>
     </data>
     <LinearLayout
         android:orientation="vertical"

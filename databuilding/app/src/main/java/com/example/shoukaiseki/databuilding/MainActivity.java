@@ -1,4 +1,4 @@
-package com.example.shoukaiseki.ttttt;
+package com.example.shoukaiseki.databuilding;
 
 import android.app.Activity;
 import android.database.DatabaseUtils;
@@ -14,9 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.shoukaiseki.ttttt.databinding.ActivityMainBinding;
-import com.example.shoukaiseki.ttttt.model.Person;
-import com.example.shoukaiseki.ttttt.model.User;
+import com.example.shoukaiseki.databuilding.databinding.ActivityMainBinding;
+import com.example.shoukaiseki.databuilding.model.Person;
+import com.example.shoukaiseki.databuilding.model.User;
 
 public class MainActivity extends AppCompatActivity {
     ViewDataBinding binding;
