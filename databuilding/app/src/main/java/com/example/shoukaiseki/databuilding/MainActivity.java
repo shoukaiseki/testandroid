@@ -1,7 +1,5 @@
 package com.example.shoukaiseki.databuilding;
 
-import android.app.Activity;
-import android.database.DatabaseUtils;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -14,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.shoukaiseki.databuilding.databinding.ActivityMainBinding;
 import com.example.shoukaiseki.databuilding.model.Person;
 import com.example.shoukaiseki.databuilding.model.User;
 
@@ -29,18 +26,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //         setContentView(R.layout.activity_main);
+        String str="pingText context";
         Person person=new Person();
         person.setName("name");
         person.setNickName("nickname");
         person.setEmail("linux@asus.com");
 
         user = new User();
-        user.setName("用户名");
-        user.setNickName("昵称");
+        user.setName("用户名_name");
+        user.setNickName("昵称_nickname");
         user.setEmail("example@qq.com");
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main );
         binding.setVariable(BR.user,user);
         binding.setVariable(BR.person,person);
+        binding.setVariable(BR.pingText,str);
 //        binding.setUser(user);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -87,6 +86,23 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            final StringBuffer sb = new StringBuffer();
+//            PingUtils.ping("114.114.114.114" ,2, sb);
+            String ip = "xnymaximo.dunanchina.net";
+//            ip="www.baidu.com";
+            PingUtils.ping(ip, sb);
+            final String finalIp = ip;
+            new Thread(
+            new Runnable() {
+
+                @Override
+                public void run() {
+                    IpUtils.getHostIp(finalIp, sb);
+                    binding.setVariable(BR.pingText, sb.toString());
+                    binding.invalidateAll();
+                }
+            }).start();
+
             return true;
         }
 
